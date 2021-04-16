@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('title', $car->title)
 
-  <title>Cars</title>
+@section('content')
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<h2>{{ $car->title }}</h2>
+<p>Car Producer: {{ $car->producer }}</p>
+<p>Number of dors: {{ $car->number_of_dors }}</p>
 
-  <!-- Styles -->
-  <style>
-    body {
-      font-family: 'Nunito', sans-serif;
-    }
-  </style>
-</head>
-
-<body class="antialiased">
-  <h2>{{$car->title}}</h2>
-  <p>{{$car->producer}}</p>
-  <p>{{$car->number_of_doors}}</p>
-</body>
-
-</html>
+<a href="/cars">Back</a>
+@endsection
