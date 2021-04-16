@@ -19,12 +19,9 @@
 </head>
 
 <body class="antialiased">
-  <h2>Cars</h2>
-  <ul>
-    @foreach($cars as $car)
-    <li><a href="{{route('car', ['car' => $car->id])}}">{{$car->title}}<a /></li>
-    @endforeach
-  </ul>
+  <h2>{{$car->title}}</h2>
+  <p>{{$car->producer}}</p>
+  <p>{{$car->number_of_doors}}</p>
 </body>
 
 </html>
